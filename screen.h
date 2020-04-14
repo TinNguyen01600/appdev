@@ -31,3 +31,4 @@ void setbgcolor(int);
 void setcolors(int, int);
 void drawrect(int, int ,int, int);
 Position getscreensize(void);
+int device_status(void);
