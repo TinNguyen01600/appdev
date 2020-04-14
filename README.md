@@ -17,6 +17,7 @@ Table of contents:
 7. Credits and acknowledgements
 
 
+
 1. Configuration instructions
 	In this section you need to tell the user how to configure the 
 	systems to run this app.
@@ -27,7 +28,7 @@ Table of contents:
 
 3. Operating Instructions
 	In this section you need to tell the use how to run the app. E.g,
-	anny command line arguments needed, any 3rd party library needed, etc.
+	any command line arguments needed, any 3rd party library needed, etc.
 
 4. File manifest
 	Offer a list of files included in this app 
@@ -36,6 +37,12 @@ Table of contents:
 	README.md:		this file
 	screen.c:		contains screen manipulation functions
 	screen.h:		contains screen function declarations and related constants
+	comm.c:			contains function for client-server communication
+	comm.h:			contains function declaration used in comm.c
+	makefile:		contains linking rule, compiling rule, cleaning rule and archiving rule; used to compile .c file into 
+					.o files for execution 
+	testcurl.c:		contains main funtion to implement curl
+	testscreen.c:	contains main function to run animation on screen.
 
 5. Copyright and licensing information
 	This application follows GPLv2 license 
