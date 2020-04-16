@@ -2,6 +2,7 @@
 #include <unistd.h>
 #include <stdio.h>
 #include "comm.h"
+#include "sound.h"
 
 int main(void){
 	Position cur = getscreensize();
@@ -27,43 +28,22 @@ int main(void){
 		//sleep(1);
 		usleep(250000);
 	}
-	/*for(int i=0; i<20; i++){
-		setcolors(RED, GREEN);
-		clearscreen();
-		gotoXY(1,4*i+1);
-		printf("hello\n");
-		usleep(500000);
-	}
-	for(int i=0; i<20; i++){
-		setcolors(RED,GREEN);
-		clearscreen();
-		gotoXY(i+1,77);
-		printf("hello\n");
-		usleep(500000);
-	}
-	for(int i=19; i>=0; i--){
-		setcolors(RED,GREEN);
-		clearscreen();
-		gotoXY(20,4*i);
-		printf("hello\n");
-		usleep(500000);
-	}
-	for(int i=19; i>=0; i--){
-		setcolors(RED,GREEN);
-		clearscreen();
-		gotoXY(i,1);
-		printf("hello\n");
-		usleep(500000);
-	}*/
+
 	//clearscreen();
-	/*setfgcolor(BLUE);
+	setfgcolor(BLUE);
 	gotoXY(14, 35);
 	printf("E1900300\n");
 	getchar();
 	drawbar(30,30);
-	drawbar(50,30);*/
+	drawbar(50,30);
+
 	getchar();
 	resetcolor();
 	clearscreen();
 	printf("This line is back to default color.\n");
+	FILE *fp;
+	fp = fopen("test.wav","r");
+	WAVheader h = read_wav_header(fp);
+	fclose(fp);
+	display_wav_header(h);
 }
