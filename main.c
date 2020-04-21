@@ -5,8 +5,7 @@
 #include "sound.h"
 
 int main(void){
-	Position cur = getscreensize();
-	char postdata[100];
+/*	char postdata[100];
 	sprintf(postdata, "row=%d&col=%d&id=e1900300", cur.row, cur.col);
 	sendpost(URL, postdata);
 
@@ -40,11 +39,14 @@ int main(void){
 	getchar();
 	resetcolor();
 	clearscreen();
-	printf("This line is back to default color.\n");
+	printf("This line is back to default color.\n");*/
 	FILE *fp;
 	fp = fopen("test.wav","r");
+	clearscreen();
 	WAVheader h = read_wav_header(fp);
-	display_wav_header(h);
+	//display_wav_header(h);
+	//clearscreen();
 	wavdata(h, fp);		//to cal and display values as a barchart
 	fclose(fp);
+	getchar();
 }
