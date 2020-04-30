@@ -41,6 +41,7 @@ int main(void){
 	resetcolor();
 	clearscreen();
 	printf("This line is back to default color.\n");
+	
 	FILE *fp;
 	fp = fopen("test.wav","r");
 	WAVheader h = read_wav_header(fp);
