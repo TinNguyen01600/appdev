@@ -36,8 +36,8 @@ Table of contents:
 	2.3 Copy the ZIP file, whose name is appdev-master, to the **appdev** folder made previously.
 	2.4 Go to **appdev** folder.
 	2.5 Right click on the ZIP file and choose option *Extract here*.
-		You should see there are 13 files in total.
-	2.6 Move 2 .php files to the the folder **public_html**.
+		You should see there are 12 files in total.
+	2.6 Move the .php files to the the folder **public_html**.
 	2.7 Guarantee that the sound file .wav and 11 source code files **must** be in the same folder,
 		in this case **appdev** folder.
 
@@ -66,12 +66,14 @@ Table of contents:
 					used to compile .c files into .o files for execution 
 	testcurl.c:		contains main funtion to implement curl
 	testscreen.c:	contains main function to run animation on screen.
-	main.c:
-	sound.c:
-	sound.h:
-	puttysize.php:
-	test.php:
+	main.c:			contains main function to execute the sound wave display.
+	sound.c:		contains sound manipulation functions.
+	sound.h:		contains sound function declarations and realated constants
+	puttysize.php:	contains a php program which receive datas of sound wave from sound functions
 
 5. Copyright and licensing information
 	This application follows GPLv2 license 
+6. Contact Information
+	NGUYEN DUC TIN e1900300
+	Vaasa University of Applied Science
 
